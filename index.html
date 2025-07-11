@@ -1,85 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jnanapalai - Senior Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar Menu -->
-        <nav class="sidebar">
-            <ul>
-                <li><a href="javascript:void(0);" onclick="showSection('about')">About</a></li>
-                <li><a href="javascript:void(0);" onclick="showSection('skills')">My Skills</a></li>
-                <li><a href="javascript:void(0);" onclick="showSection('work')">Work</a></li>
-                <li><a href="javascript:void(0);" onclick="showSection('contact')">Contact</a></li>
-            </ul>
-        </nav>
 
-        <!-- Main Content -->
-        <div class="content">
-            <!-- About Section -->
-            <section id="about" class="section">
-                <h1>About Me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod bibendum felis.</p>
-            </section>
+  <header>
+    <nav class="container">
+      <a href="#hero" class="logo">Jnana Palai</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <!-- Skills Section -->
-            <section id="skills" class="section">
-                <h1>My Skills</h1>
-                <p>HTML, CSS, JavaScript, React, Node.js, Python, and more...</p>
-            </section>
-
-            <!-- Work Section -->
-            <section id="work" class="section">
-                <h1>My Work</h1>
-                <p>Here are some projects I've worked on:</p>
-                <ul>
-                    <li>Project 1 - Description</li>
-                    <li>Project 2 - Description</li>
-                    <li>Project 3 - Description</li>
-                </ul>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h1>Contact</h1>
-                <p>Email: example@example.com</p>
-                <p>Phone: +123456789</p>
-            </section>
-        </div>
+  <section id="hero" class="hero container">
+    <div>
+      <h1>Hello, I'm <span>Jnana Palai</span></h1>
+      <h3>Backend Developer</h3>
+      <h4>I write the code users don’t see — but always rely on.</h4>
+      <!-- <p>Senior Software Engineer passionate about building scalable, efficient web applications.</p> -->
+    </br>
+      <a href="#projects" class="btn">See My Work</a>
     </div>
+  </section>
 
-    <script>
-        // Default Section to Show (About Me)
-        document.addEventListener("DOMContentLoaded", function() {
-            showSection('about');
-        });
+  <section id="about" class="container about">
+    <h2>About Me</h2>
+    <p style="text-align: justify; line-height: 1.8; margin-bottom: 15px;">
+      I’m a Senior Software Engineer with 13 years of experience in building scalable, efficient applications.
+      Specializing in Java, Spring Boot, Docker, Kubernetes, and SQL.
+      I focus on delivering high-quality solutions in Agile environments using TDD and BDD practices.
+  </p>
+  
+  <p style="text-align: justify; line-height: 1.8;">
+      I have experience in designing system architectures and have worked closely with cross-functional teams 
+      to tackle complex technical challenges and deliver impactful solutions.
+  </p>
+  </section>
 
-        // Function to Show Section Based on Menu Click
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(function(section) {
-                section.classList.remove('show'); 
-                section.classList.add('hide');  // Remove show class to hide 
-            });
+  <section id="skills" class="container skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Java</li>
+      <li>Spring & Spring Boot</li>
+      <li>REST & GRPC APIs</li>
+      <li>Docker & Kubernetes</li>
+      <li>Junit & Mockito</li>
+    </ul>
+  </section>
 
-            // Show the selected section
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.classList.add('show'); 
-                selectedSection.classList.remove('hide'); // Add show class to display
+  <section id="projects" class="container projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <article class="project-card">
+        <h3>Project One</h3>
+        <p>A web app for managing tasks and improving productivity.</p>
+        <a href="https://github.com/jnanapalai/project-one" target="_blank" rel="noopener">View Code</a>
+      </article>
+      <article class="project-card">
+        <h3>Project Two</h3>
+        <p>A real-time chat application built with React and Firebase.</p>
+        <a href="https://github.com/jnanapalai/project-two" target="_blank" rel="noopener">View Code</a>
+      </article>
+      <!-- Add more projects here -->
+    </div>
+  </section>
 
-                 // Scroll the entire page to the top of the selected section
-                window.scrollTo({
-                    top: selectedSection.offsetTop - document.documentElement.clientHeight / 2,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    </script>
+  <section id="experience" class="container experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>
+        <strong>Senior Software Engineer</strong> - Company XYZ (2020–Present)<br />
+        Led the frontend team to build scalable React applications, improving performance by 30%.
+      </li>
+      <li>
+        <strong>Software Engineer</strong> - Company ABC (2017–2020)<br />
+        Developed REST APIs and microservices with Node.js and Express.
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" class="container contact">
+    <h2>Contact Me</h2>
+    <p>
+      <i class="fas fa-envelope"></i> 
+      Email: <a href="mailto:jnana335@gmail.com">jnanapalai@example.com</a>
+  </p>
+  <p>
+      <i class="fab fa-github"></i> 
+      GitHub: <a href="https://github.com/jnanapalai" target="_blank" rel="noopener">github.com/jnanapalai</a>
+  </p>
+  <p>
+      <i class="fab fa-linkedin"></i> 
+      LinkedIn: <a href="https://linkedin.com/in/jnanapalai" target="_blank" rel="noopener">linkedin.com/in/jnanapalai</a>
+  </p>  </section>
+
+  <footer>
+    <p>© 2025 Jnanapalai. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
