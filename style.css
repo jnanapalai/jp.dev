@@ -202,3 +202,56 @@ footer {
 section {
   scroll-margin-top: 20px;
 }
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  font-weight: 700; /* Keep bold text */
+  color: #0070f3; /* Link color */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  
+}
+
+.dropdown-btn:hover {
+  color: #0056b3; /* Change color on hover */
+  text-decoration: underline; /* Remove underline on hover */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+  min-width: 160px;
+  padding: 10px 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #007bff;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on button click */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
